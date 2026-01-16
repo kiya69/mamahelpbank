@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>語言學校 - 媽媽互助銀行</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="language-style.css">
+</head>
+<body>
+    <div class="language-page">
+        <div class="back-link">
+            <a href="index.html">← 返回商店首頁</a>
+        </div>
+
+        <div class="page-header">
+            <h1>找到你的德語學習旅程起點！</h1>
+            <p class="subtitle">無論你已準備好前往德國，或想短期體驗，<br>我們都為你準備了最適合的選項。</p>
+        </div>
+
+        <div class="map-section">
+            <h2>語言學校位置</h2>
+            <p class="map-intro">好德在德國各地擁有眾多優質語言學校夥伴，涵蓋主要城市。這將為你提供豐富的選擇，讓你能夠在最喜歡的城市，開啟專屬你的德國學習旅程。</p>
+            
+            <div class="map-container">
+                <svg id="germany-map" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Simplified Germany outline -->
+                    <path id="germany-outline" d="M 100 150 L 200 100 L 350 120 L 500 100 L 650 130 L 700 200 L 680 350 L 600 450 L 450 500 L 300 480 L 150 400 L 80 300 Z" 
+                          fill="#f0f0f0" stroke="#ddd" stroke-width="2"/>
+                    
+                    <!-- City markers -->
+                    <circle class="city-marker" cx="200" cy="120" r="8" data-city="Berlin" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="180" cy="200" r="8" data-city="Hamburg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="250" cy="280" r="8" data-city="Frankfurt" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="350" cy="350" r="8" data-city="München" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="220" cy="250" r="8" data-city="Köln" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="280" cy="300" r="8" data-city="Stuttgart" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="240" cy="220" r="8" data-city="Marburg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="320" cy="280" r="8" data-city="Radolfzell" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="260" cy="260" r="8" data-city="Saarbrücken" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="330" cy="250" r="8" data-city="Konstanz" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="360" cy="320" r="8" data-city="Lindenberg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="340" cy="300" r="8" data-city="Bad Schussenried" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="230" cy="240" r="8" data-city="Düsseldorf" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="280" cy="270" r="8" data-city="Heidelberg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    <circle class="city-marker" cx="300" cy="180" r="8" data-city="Dresden" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    
+                    <!-- City labels -->
+                    <text class="city-label" x="200" y="110" font-size="12" fill="#666" text-anchor="middle">Berlin</text>
+                    <text class="city-label" x="180" y="190" font-size="12" fill="#666" text-anchor="middle">Hamburg</text>
+                    <text class="city-label" x="250" y="270" font-size="12" fill="#666" text-anchor="middle">Frankfurt</text>
+                    <text class="city-label" x="350" y="340" font-size="12" fill="#666" text-anchor="middle">München</text>
+                    <text class="city-label" x="220" y="240" font-size="12" fill="#666" text-anchor="middle">Köln</text>
+                    <text class="city-label" x="280" y="290" font-size="12" fill="#666" text-anchor="middle">Stuttgart</text>
+                </svg>
+
+                <!-- Tooltip for showing school info -->
+                <div id="map-tooltip" class="map-tooltip">
+                    <div class="tooltip-header"></div>
+                    <div class="tooltip-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="schools-list-section">
+            <h2>所有語言學校</h2>
+            <div class="schools-grid" id="schools-list">
+                <!-- Schools will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>你適合哪種語言學校？</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>我今天想要...</h3>
+                    <p>不論你的目標是長期深耕或短期探索，這裡的語言學校都能滿足你的需求。我們提供專為留學銜接或純粹體驗設計的課程，讓你能夠根據個人規劃，選擇最合適的學習起點。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="language-script.js"></script>
+</body>
+</html>
