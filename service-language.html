@@ -23,36 +23,15 @@
             <p class="map-intro">好德在德國各地擁有眾多優質語言學校夥伴，涵蓋主要城市。這將為你提供豐富的選擇，讓你能夠在最喜歡的城市，開啟專屬你的德國學習旅程。</p>
             
             <div class="map-container">
-                <svg id="germany-map" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Simplified Germany outline -->
-                    <path id="germany-outline" d="M 100 150 L 200 100 L 350 120 L 500 100 L 650 130 L 700 200 L 680 350 L 600 450 L 450 500 L 300 480 L 150 400 L 80 300 Z" 
-                          fill="#f0f0f0" stroke="#ddd" stroke-width="2"/>
+                <div class="map-wrapper">
+                    <img id="germany-map" src="map.svg" alt="Germany Map" class="map-svg">
                     
-                    <!-- City markers -->
-                    <circle class="city-marker" cx="200" cy="120" r="8" data-city="Berlin" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="180" cy="200" r="8" data-city="Hamburg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="250" cy="280" r="8" data-city="Frankfurt" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="350" cy="350" r="8" data-city="München" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="220" cy="250" r="8" data-city="Köln" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="280" cy="300" r="8" data-city="Stuttgart" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="240" cy="220" r="8" data-city="Marburg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="320" cy="280" r="8" data-city="Radolfzell" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="260" cy="260" r="8" data-city="Saarbrücken" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="330" cy="250" r="8" data-city="Konstanz" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="360" cy="320" r="8" data-city="Lindenberg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="340" cy="300" r="8" data-city="Bad Schussenried" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="230" cy="240" r="8" data-city="Düsseldorf" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="280" cy="270" r="8" data-city="Heidelberg" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    <circle class="city-marker" cx="300" cy="180" r="8" data-city="Dresden" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
-                    
-                    <!-- City labels -->
-                    <text class="city-label" x="200" y="110" font-size="12" fill="#666" text-anchor="middle">Berlin</text>
-                    <text class="city-label" x="180" y="190" font-size="12" fill="#666" text-anchor="middle">Hamburg</text>
-                    <text class="city-label" x="250" y="270" font-size="12" fill="#666" text-anchor="middle">Frankfurt</text>
-                    <text class="city-label" x="350" y="340" font-size="12" fill="#666" text-anchor="middle">München</text>
-                    <text class="city-label" x="220" y="240" font-size="12" fill="#666" text-anchor="middle">Köln</text>
-                    <text class="city-label" x="280" y="290" font-size="12" fill="#666" text-anchor="middle">Stuttgart</text>
-                </svg>
+                    <!-- Interactive city markers overlay -->
+                    <svg class="markers-overlay" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                        <!-- City markers -->
+                        <circle class="city-marker" cx="580" cy="130" r="8" data-city="Berlin" fill="#2c3e50" stroke="#fff" stroke-width="2"/>
+                    </svg>
+                </div>
 
                 <!-- Tooltip for showing school info -->
                 <div id="map-tooltip" class="map-tooltip">
